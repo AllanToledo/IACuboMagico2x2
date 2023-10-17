@@ -2,6 +2,7 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Data
 public class Estado implements Comparable<Estado> {
@@ -13,7 +14,7 @@ public class Estado implements Comparable<Estado> {
     private boolean caminhoSolucao = false;
     private int profudindidade = 0;
     private int euristicaEProfunidade;
-    public static Map<Estado, Integer> estados = new HashMap<>();
+    public static Map<Estado, Integer> estados = new ConcurrentHashMap<>();
     public static int coeficienteProfundidade = 7;
     public static int coeficienteHeuristica = 3;
 

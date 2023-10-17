@@ -14,14 +14,14 @@ public class Main {
     static public void main(String[] args) {
         estadoRaiz = new Estado(
                 new ProblemaCuboMagico2x2(new short[][]{
-                        {0, 0, 5, 5, 0, 0}, //Topo
-                        {0, 0, 1, 1, 0, 0},
-                        {2, 2, 3, 6, 2, 2}, //Frente
-                        {6, 3, 4, 4, 3, 6},
-                        {0, 0, 5, 1, 0, 0}, //Baixo
-                        {0, 0, 5, 1, 0, 0},
-                        {0, 0, 4, 4, 0, 0}, //Atras
-                        {0, 0, 3, 6, 0, 0}}));
+                        {0, 0, 2, 5, 0, 0}, //Topo
+                        {0, 0, 1, 6, 0, 0},
+                        {5, 2, 3, 4, 5, 3}, //Frente
+                        {6, 6, 1, 4, 5, 3},
+                        {0, 0, 2, 3, 0, 0}, //Baixo
+                        {0, 0, 4, 4, 0, 0},
+                        {0, 0, 1, 1, 0, 0}, //Atras
+                        {0, 0, 6, 2, 0, 0}}));
 //        new ProblemaCuboMagico2x2(new short[][]{
 //                        {0, 0, 4, 1, 0, 0}, //Topo
 //                        {0, 0, 1, 6, 0, 0},
