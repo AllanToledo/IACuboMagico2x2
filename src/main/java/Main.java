@@ -50,7 +50,7 @@ public class Main {
                 System.out.println("Número de estados gerados: " + estadosGerados);
                 keepSearching = false;
                 estado.setCaminhoSolucao(true);
-                deletaEstado(estadoRaiz);
+                deletaEstadoSemSolucao(estadoRaiz);
             } else {
                 estado.gerarEstadosFilhos();
                 estadosGerados += estado.getEstadosFilhos().size();
@@ -72,11 +72,11 @@ public class Main {
         new Scanner(System.in).next();
     }
 
-    public static void deletaEstado(Estado estado) {
+    public static void deletaEstadoSemSolucao(Estado estado) {
         estado.getEstadosFilhos().removeIf(estadoFilho -> !estadoFilho.isCaminhoSolucao());
         for (Estado estadoFilho : estado.getEstadosFilhos()) {
             if (estadoFilho.isCaminhoSolucao())
-                deletaEstado(estadoFilho);
+                deletaEstadoSemSolucao(estadoFilho);
         }
     }
 
